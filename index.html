@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Questions from CSV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Topic</h1>
+        
+        <input type="file" id="fileInput" accept=".csv" onchange="handleFileUpload(event)">
+        
+        <div id="topicContainer" style="margin-top: 20px;">
+            <h2>Topics</h2>
+            <select id="topicSelect" onchange="updateQuestions()">
+            </select>
+            
+            <div id="questionsContainer">
+                <h2>Questions</h2>
+                <div id="easyQuestions"></div>
+                <div id="mediumQuestions"></div>
+                <div id="hardQuestions"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
